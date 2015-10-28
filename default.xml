@@ -4,22 +4,32 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
   <remote  name="x86"
+           fetch="git://gitscm.sf.net/gitroot/android-x86/" />
+  <remote  name="streamagame"
            fetch="." />
-  <default revision="refs/tags/android-5.1.1_r24"
+  <default revision="refs/tags/android-5.1.1_r1"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
+
+  <!-- from Stream-A-Game repositories -->
+  
+  <project path="external/qemu" name="streamagame_platform_external_qemu" remote="streamagame" groups="pdk-cw-fs" revision="streamagame-lollipop-x86" />
+  <project path="device/generic/common" name="streamagame_device_generic_common" groups="pdk" remote="streamagame" revision="streamagame-lollipop-x86" />
+  <project path="sdk" name="streamagame_platform_sdk" groups="pdk-cw-fs" remote="streamagame" revision="streamagame-lollipop-x86" />
+  <project path="bootable/newinstaller" name="streamagame_bootable_newinstaller" remote="streamagame" revision="lollipop-x86" />
+  <project path="system/netd" name="streamagame_platform_system_netd" remote="streamagame" groups="pdk" revision="streamagame-lollipop-x86" />
+  <project path="kernel" name="streamagame_kernel" remote="streamagame" revision="streamagame-kernel-4.0" />
+
+  <!-- Maybe soon Stream-A-Game repositories :) -->
+  <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="lollipop-x86" />
 
   <!-- from x86 port repositories -->
   <project path="build" name="platform/build" groups="pdk,tradefed" remote="x86" revision="lollipop-x86" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.0" />
   <project path="art" name="platform/art" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="lollipop-x86" />
-  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="lollipop-x86" />
-  <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="lollipop-x86" />
-  <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="external/alsa-lib" name="platform/external/alsa-lib" remote="x86" revision="lollipop-x86" />
   <project path="external/alsa-utils" name="platform/external/alsa-utils" remote="x86" revision="lollipop-x86" />
@@ -292,7 +302,6 @@
   <project path="external/ppp" name="platform/external/ppp" groups="pdk-cw-fs" />
   <project path="external/proguard" name="platform/external/proguard" groups="pdk-java,tradefed" />
   <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" />
-  <project path="external/qemu" name="platform/external/qemu" groups="notdefault,pdk-cw-fs" />
   <project path="external/qemu-pc-bios" name="platform/external/qemu-pc-bios" groups="notdefault,pdk-cw-fs" />
   <project path="external/regex-re2" name="platform/external/regex-re2" groups="pdk-cw-fs" />
   <project path="external/replicaisland" name="platform/external/replicaisland" groups="pdk-cw-fs" />
@@ -529,10 +538,8 @@
   <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="notdefault,pdk" clone-depth="1" />
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
-  <project path="sdk" name="platform/sdk" groups="pdk-cw-fs" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
-  <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
