@@ -7,13 +7,16 @@
            fetch="git://gitscm.sf.net/gitroot/android-x86/" />
   <remote  name="streamagame"
            fetch="." />
+  <remote  name="streamagame-tubit"
+           fetch="https://gitlab.tubit.tu-berlin.de/justus.beyer/" />
   <default revision="refs/tags/android-5.1.1_r1"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
 
   <!-- from Stream-A-Game repositories -->
-  
+
+  <project path="frameworks/base" name="streamagame_platform_frameworks_base.git" groups="pdk-cw-fs" remote="streamagame-tubit" revision="streamagame-lollipop-x86" />
   <project path="external/qemu" name="streamagame_platform_external_qemu" remote="streamagame" groups="pdk-cw-fs" revision="streamagame-lollipop-x86" />
   <project path="device/generic/common" name="streamagame_device_generic_common" groups="pdk" remote="streamagame" revision="streamagame-lollipop-x86" />
   <project path="sdk" name="streamagame_platform_sdk" groups="pdk-cw-fs" remote="streamagame" revision="streamagame-lollipop-x86" />
@@ -54,7 +57,6 @@
   <project path="external/v86d" name="platform/external/v86d" remote="x86" revision="lollipop-x86" />
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" remote="x86" revision="lollipop-x86" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" remote="x86" revision="lollipop-x86" />
   <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="hardware/drm_gralloc" name="platform/hardware/drm_gralloc" remote="x86" revision="lollipop-x86" />
   <project path="hardware/gps" name="platform/hardware/gps" remote="x86" revision="lollipop-x86" />
@@ -364,7 +366,7 @@
   <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs" />
-  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" revision="refs/tags/android-5.1.1_r24" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs" />
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs" />
