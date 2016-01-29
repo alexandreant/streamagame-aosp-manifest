@@ -23,14 +23,15 @@
   <project path="bootable/newinstaller" name="streamagame_bootable_newinstaller" remote="streamagame" revision="lollipop-x86" />
   <project path="system/netd" name="streamagame_platform_system_netd" remote="streamagame" groups="pdk" revision="streamagame-lollipop-x86" />
   <project path="kernel" name="streamagame_kernel" remote="streamagame" revision="streamagame-kernel-4.0" />
+  <project path="packages/apps/Settings" name="streamagame_platform_packages_apps_Settings" remote="streamagame" revision="streamagame-lollipop-x86" />
+  <project path="build" name="streamagame_build" groups="pdk,tradefed" remote="streamagame" revision="streamagame-lollipop-x86" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
 
   <!-- Maybe soon Stream-A-Game repositories :) -->
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="lollipop-x86" />
 
   <!-- from x86 port repositories -->
-  <project path="build" name="platform/build" groups="pdk,tradefed" remote="x86" revision="lollipop-x86" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
   <project path="art" name="platform/art" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" revision="lollipop-x86" />
@@ -71,7 +72,6 @@
   <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" groups="pdk-cw-fs" remote="x86" revision="lollipop-x86" />
   <project path="packages/apps/CMFileManager" name="platform/packages/apps/CMFileManager" remote="x86" revision="lollipop-x86" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" remote="x86" revision="lollipop-x86" />
   <project path="packages/apps/TSCalibration2" name="platform/packages/apps/TSCalibration2" remote="x86" revision="lollipop-x86" />
   <project path="system/core" name="platform/system/core" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" remote="x86" revision="lollipop-x86" />
