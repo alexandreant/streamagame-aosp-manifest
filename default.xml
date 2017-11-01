@@ -6,7 +6,7 @@
   <remote  name="x86"
            fetch="git://git.osdn.net/gitroot/android-x86/" />
   <remote  name="streamagame"
-           fetch="." />
+           fetch="https://github.com/streamagame/" />
   <remote  name="streamagame-tubit"
            fetch="https://gitlab.tubit.tu-berlin.de/justus.beyer/" />
   <default revision="refs/tags/android-5.1.1_r1"
